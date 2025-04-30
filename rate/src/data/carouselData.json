@@ -1,14 +1,26 @@
 {
   "slides": [
     {
-      "id": 0,
       "src": "https://picsum.photos/seed/img1/80/120",
-      "alt": "Image 1 for carousel"
+      "alt": "Image 1 for carousel",
+      "id": 278,
+      "title": "The Shawshank Redemption",
+      "overview": "Imprisoned in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope.",
+      "comments": "I want to watch this movie for easter break",
+      "status": "To Watch",
+      "media": ["youtube", "netflix"],
+      "rating": 8.707
     },
     {
-      "id": 1,
       "src": "https://picsum.photos/seed/img2/80/120",
-      "alt": "Image 2 for carousel"
+      "alt": "Image 2 for carousel",
+      "id": 238,
+      "title": "The Godfather",
+      "overview": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.",
+      "comments": "I want to watch this movie for christmas",
+      "status": "To Watch",
+      "media": ["youtube", "netflix"],
+      "rating": 8.7
     },
     {
       "id": 2,

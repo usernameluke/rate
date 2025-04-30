@@ -7,7 +7,7 @@ import { YetToSee } from "./components/YetToSee";
 import { slides } from "./data/carouselData.json"
 import { Routes, Route } from "react-router-dom";
 import { Watchlist } from "./pages/Watchlist";
-import { Link } from "react-router-dom";
+import { Info } from "./pages/Info";
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
       <div className="mainpage">
         <Routes>
           <Route path="/watchlist" element={<Watchlist/>}/>
+          <Route path="/info/:specificId" element={<Info data={slides}/>}/>
         </Routes>
         <Series data={slides} />
         <Films data={slides}/>
