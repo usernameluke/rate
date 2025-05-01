@@ -1,15 +1,17 @@
 import { FaRegHeart } from "react-icons/fa";
 import { MdOutlineDelete } from "react-icons/md";
 import { FaRegCommentDots } from "react-icons/fa";
-// import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 export function Info({ data }) {
-  // const { specificId } = useParams();
-  // const currentData = data.filter((info) => info.id === specificId);
-
+  const { specificId } = useParams();
+  const currentData = data.filter((info) => parseInt(info.id) === parseInt(specificId));
+console.log(data)
+  
   return (
     <>
-      {data.map((item) => {
+      {currentData.map((item) => {
+        console.log(item)
         return (
           <div className="info-page">
             <div className="info-flex" key={item.id}>

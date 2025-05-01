@@ -13,7 +13,7 @@ export function Series({ data }) {
         {data.map((item) => {
           return (
             <swiper-slide key={item.id}>
-              <Link to="/info/:specificId">
+              <Link to={`/info/${item.id}`}>
                 <img src={item.src} alt={item.alt} className="poster" />
               </Link>
             </swiper-slide>
