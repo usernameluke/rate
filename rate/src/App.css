@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 * {
   margin: 0;
   padding: 0;
@@ -23,7 +25,6 @@ body {
   }
 
   .navbar-container{
-    padding-bottom: 10px;
     /* border-bottom: 0.5px solid white; */
   }
 
@@ -108,7 +109,7 @@ body {
 
   .row-title{
     color: white;
-    padding-left: 1.5rem;
+    padding-left: 0.6rem;
   }
 
   .poster{
@@ -123,10 +124,6 @@ body {
     width: 100vw;
     height: 130px;
     margin-bottom: 10px;
-  }
-  
-  p{
-    color: white;
   }
 
   .menu-logo{
@@ -215,19 +212,45 @@ body {
     margin: 10px;
     border-radius: 10px;
     border: 2px solid white;
-    height: 75vh;
+    height: 88vh;
     position: relative;
     box-shadow: 0 0 10px white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
   }
 
-  .info-title, .info-poster, .info-description, .info-status, .info-rating, .info-platform, .info-comment{
+  .info-page-top{
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 10px;
+  }
+
+  .info-page-mid{
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 10px;
+  }
+
+  .info-title, .info-poster, .info-status, .info-rating, .info-platform, .info-comment{
     color: white;
     margin: 10px;
+  }
+
+  .info-description{
+    margin: 0 10px;
   }
 
   .info-flex{
     display: flex;
     justify-content: center;
+    align-items: center;
+  }
+
+  .info-buttons{
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
   }
 
@@ -241,24 +264,79 @@ body {
   .info-poster{
     height: 150px;
     border-radius: 5%;
-    border: 1px solid white;
-    box-shadow: 0 0 10px white;
+    border: 1px solid black;
+    padding: 5px;
+    background-color: black;
+    /* box-shadow: 0 0 10px black; */
+  }
+
+  .info-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   .info-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: black;
     color: white;
     border-radius: 50%;
     border: 2px solid white;
     padding: 5px;
     box-shadow: 0 0 10px white;
+    width: 40px;
+    height: 40px;
   }
 
   .info-img{
     display: flex;
     justify-content: center;
-    height: 20px;
-    width: 20px;
+    align-items: center;
+    height: 25px;
+    width: 25px;
+  }
+
+  .info-btn-txt{
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  .info-img-popcorn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+  }
+
+  .info-img-watching{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    padding-top: 5px;
+    padding-left: 2px;
+  }
+
+  .info-img-watched{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    padding-top: 3px;
+    padding-right: 3px;
+  }
+
+  span{
+    color: white;
+  }
+
+  .info-btn-txt{
+    color: white;
+    display: flex;
+    flex-direction: row;
   }
 }
 /* 

@@ -62,7 +62,7 @@ export function Navbar() {
           </div>
         </div>
         <nav className={header ? "nav-menu active" : "nav-menu"}>
-          <ul className="nav-menu-items" onClick={showHeader}>
+          <ul className="nav-menu-items z-10" onClick={showHeader}>
             <li className="navbar-toggle">
               <Link to="#" className="icon menu-logo">
                 <IoIosCloseCircleOutline className="cross-icon" />
