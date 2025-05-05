@@ -42,17 +42,17 @@ export function Navbar() {
           <div className="nav-right">
             <div className="search" onClick={() => setShowSearch(!showSearch)}>
               {showSearch ? (
-                <IoIosCloseCircleOutline className="nav-icon icon cross-icon" />
+                <IoIosCloseCircleOutline className="nav-icon icon" />
               ) : (
                 <FaMagnifyingGlass className="nav-icon icon" />
               )}
             </div>
             {showSearch && (
-              <form className="search-form">
+              <form className="search-form bg-white rounded-xl">
                 <input
                   type="search"
                   placeholder="Search here..."
-                  className="search-input"
+                  className="search-input text-sm"
                 />
               </form>
             )}
@@ -61,8 +61,8 @@ export function Navbar() {
             <IoPersonOutline className="nav-icon icon" />
           </div>
         </div>
-        <nav className={header ? "nav-menu active" : "nav-menu"}>
-          <ul className="nav-menu-items z-10" onClick={showHeader}>
+        <nav className={header ? "nav-menu active z-10" : "nav-menu"}>
+          <ul className="nav-menu-items" onClick={showHeader}>
             <li className="navbar-toggle">
               <Link to="#" className="icon menu-logo">
                 <IoIosCloseCircleOutline className="cross-icon" />
@@ -71,55 +71,55 @@ export function Navbar() {
             <li className="navbar-item">
               <Link to="/series">
                 <FiTv className="icon" />
-                <span>Series</span>
+                <span className="cinzel-400">Series</span>
               </Link>
             </li>
             <li className="navbar-item">
               <Link to="/films">
                 <GiFilmProjector className="icon" />
-                <span>Films</span>
+                <span className="cinzel-400">Films</span>
               </Link>
             </li>
             <li className="navbar-item">
               <Link to="/genre">
                 <TfiVideoClapper className="icon" />
-                <span>Genre</span>
+                <span className="cinzel-400">Genre</span>
               </Link>
             </li>
             <li className="navbar-item">
               <Link to="/rating">
                 <MdStarRate className="icon" />
-                <span>Rating</span>
+                <span className="cinzel-400">Rating</span>
               </Link>
             </li>
             <li className="navbar-item">
               <Link to="/platform">
                 <CiStreamOn className="icon" />
-                <span>Platform</span>
+                <span className="cinzel-400">Platform</span>
               </Link>
             </li>
             <li className="navbar-item">
               <Link to="/cast">
                 <FaPersonHalfDress className="icon" />
-                <span>Cast</span>
+                <span className="cinzel-400">Cast</span>
               </Link>
             </li>
             <li className="navbar-item">
               <Link to="/director">
                 <GiDirectorChair className="icon" />
-                <span>Director</span>
+                <span className="cinzel-400">Director</span>
               </Link>
             </li>
             <li className="navbar-item">
               <Link to="/year">
                 <RiNewsLine className="icon" />
-                <span>Year</span>
+                <span className="cinzel-400">Year</span>
               </Link>
             </li>
             <li className="navbar-item">
               <Link to="/contact">
                 <FaPhoneAlt className="icon" />
-                <span>Contact</span>
+                <span className="cinzel-400">Contact</span>
               </Link>
             </li>
           </ul>

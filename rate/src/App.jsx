@@ -14,9 +14,11 @@ function App() {
   return (
     <div className="app">
       <div className="header">
-        <Navbar />
+        
       </div>
       <div className="mainpage">
+        <Navbar />
+        <h1 className="text-white font-sans cinzel-500 text-5xl text-center welcome-title">Welcome to R8+ <hr /></h1>
         <Routes>
           <Route path="/watchlist" element={<Watchlist data={slides}/>}/>
           <Route path="/watchlist/toSee" element={<ToSee data={slides}/>}/>
