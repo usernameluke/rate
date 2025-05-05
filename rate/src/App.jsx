@@ -18,7 +18,8 @@ function App() {
       </div>
       <div className="mainpage">
         <Navbar />
-        <h1 className="text-white font-sans cinzel-500 text-5xl text-center welcome-title">Welcome to R8+ <hr /></h1>
+        <h1 className="text-white cinzel-500 text-5xl text-center welcome-title">Welcome to R8+ <hr /></h1>
+        <p className="cinzel-500 text-white text-center text-xl welcome-text">your guide to the highest-rated films and shows</p>
         <Routes>
           <Route path="/watchlist" element={<Watchlist data={slides}/>}/>
           <Route path="/watchlist/toSee" element={<ToSee data={slides}/>}/>

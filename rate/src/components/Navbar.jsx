@@ -57,17 +57,28 @@ export function Navbar() {
               </form>
             )}
 
-            <Link to="/watchlist"><IoHome className="nav-icon icon" /></Link>
+            <Link to="/watchlist">
+              <IoHome className="nav-icon icon" />
+            </Link>
             <IoPersonOutline className="nav-icon icon" />
           </div>
         </div>
         <nav className={header ? "nav-menu active z-10" : "nav-menu"}>
           <ul className="nav-menu-items" onClick={showHeader}>
-            <li className="navbar-toggle">
-              <Link to="#" className="icon menu-logo">
-                <IoIosCloseCircleOutline className="cross-icon" />
-              </Link>
-            </li>
+            <div className="menu-row">
+              <div>
+                <img
+                  src="src\images\logo-red.png"
+                  alt="R8+ logo"
+                  className="red-logo"
+                />
+              </div>
+              <div>
+                <Link to="#" className="navbar-toggle icon menu-logo">
+                  <IoIosCloseCircleOutline className="menu-close" />
+                </Link>
+              </div>
+            </div>
             <li className="navbar-item">
               <Link to="/series">
                 <FiTv className="icon" />

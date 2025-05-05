@@ -53,10 +53,17 @@
   }
 
   .welcome-title {
-    margin-top: 50px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     line-height: 1.5;
+  }
+
+  .welcome-text {
+    margin-top: 1rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    line-height: 2;
   }
 
   .navbar-firstrow {
@@ -157,9 +164,25 @@
     margin-bottom: 10px;
   }
 
+  .menu-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .menu-logo {
     font-size: 2rem;
     background: none;
+  }
+
+  .red-logo{
+    margin-top: 5px;
+    height: 45px;
+    width: 58px;
+  }
+
+  .menu-close{
+    margin-top: 5px;
   }
 
   .icon {
