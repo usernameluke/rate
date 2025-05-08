@@ -1,21 +1,12 @@
-// import { useState } from "react";
 import { useState } from "react";
-import { GenreModal } from "./GenreModal";
-import { SliderModal } from "./SliderModal";
 import { FaMagnifyingGlass } from "react-icons/fa6";
-import { IoHome } from "react-icons/io5";
 import { IoPersonOutline } from "react-icons/io5";
-import { FiTv } from "react-icons/fi";
-import { GiFilmProjector } from "react-icons/gi";
 import { IoIosCloseCircleOutline } from "react-icons/io";
-import { TfiVideoClapper } from "react-icons/tfi";
-import { MdStarRate } from "react-icons/md";
-import { FaPersonHalfDress } from "react-icons/fa6";
-import { CiStreamOn } from "react-icons/ci";
-import { GiDirectorChair } from "react-icons/gi";
-import { RiNewsLine } from "react-icons/ri";
-import { FaPhoneAlt } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { IoColorFilterOutline } from "react-icons/io5";
+import { CiViewList } from "react-icons/ci";
+import { IoMenu } from "react-icons/io5";
+import { VscSignOut } from "react-icons/vsc";
+import { IoGlobeOutline } from "react-icons/io5";
 
 export function Navbar() {
   const [header, setHeader] = useState(false);
@@ -30,14 +21,13 @@ export function Navbar() {
       <div className="navbar-container">
         <div className="navbar-firstrow">
           <div className="nav-left">
-            <Link to="#" className="menu-logo">
+            <a href="#" className="menu-logo">
               <img
                 src="src\images\logo.png"
                 alt="R8+ logo"
                 className="logo-icon"
-                onClick={showHeader}
               />
-            </Link>
+            </a>
           </div>
           <div className="nav-right">
             <div className="search" onClick={() => setShowSearch(!showSearch)}>
@@ -57,13 +47,10 @@ export function Navbar() {
               </form>
             )}
 
-            <Link to="/watchlist">
-              <IoHome className="nav-icon icon" />
-            </Link>
-            <IoPersonOutline className="nav-icon icon" />
+            <IoMenu className="menu-icon text-white" onClick={showHeader} />
           </div>
         </div>
-        <nav className={header ? "nav-menu active z-10" : "nav-menu"}>
+        <nav className={header ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-menu-items" onClick={showHeader}>
             <div className="menu-row">
               <div>
@@ -74,43 +61,80 @@ export function Navbar() {
                 />
               </div>
               <div>
-                <Link to="#" className="navbar-toggle icon menu-logo">
+                <a href="#" className="navbar-toggle icon menu-logo">
                   <IoIosCloseCircleOutline className="menu-close" />
-                </Link>
+                </a>
               </div>
             </div>
-            <li className="navbar-item">
-              <Link to="/series">
-                <FiTv className="icon" />
-                <span className="cinzel-400">Series</span>
-              </Link>
-            </li>
-            <li className="navbar-item">
-              <Link to="/films">
-                <GiFilmProjector className="icon" />
-                <span className="cinzel-400">Films</span>
-              </Link>
-            </li>
-            <li className="navbar-item">
-              <Link to="/genre">
-                <TfiVideoClapper className="icon" />
-                <span className="cinzel-400">Genre</span>
-              </Link>
-            </li>
-            <li className="navbar-item">
-              <Link to="/rating">
-                <MdStarRate className="icon" />
-                <span className="cinzel-400">Rating</span>
-              </Link>
-            </li>
-            <li className="navbar-item">
-              <Link to="/platform">
-                <CiStreamOn className="icon" />
-                <span className="cinzel-400">Platform</span>
-              </Link>
-            </li>
+            <div className="menu-col">
+              <li className="navbar-item">
+                <a href="#browse">
+                  <IoGlobeOutline
+                    className="icon"
+                  />
+                  <span className="cinzel-400">Browse</span>
+                </a>
+              </li>
+              <li className="navbar-item">
+                <a href="#to-watch">
+                  <img
+                    className="icon"
+                    src="\src\images\ToWatch.png"
+                    alt="To watch"
+                  />
+                  <span className="cinzel-400">Want to Watch</span>
+                </a>
+              </li>
+              <li className="navbar-item">
+                <a href="#watching">
+                  <img
+                    className="icon"
+                    src="\src\images\Watching.png"
+                    alt="Watching"
+                  />
+                  <span className="cinzel-400">Watching</span>
+                </a>
+              </li>
+              <li className="navbar-item">
+                <a href="#watched">
+                  <img
+                    className="icon"
+                    src="\src\images\Watched.png"
+                    alt="Watched"
+                  />
+                  <span className="cinzel-400">Watched</span>
+                </a>
+              </li>
+              <li className="navbar-item">
+                <a href="#custom-list">
+                  <CiViewList className="icon" />
+                  <span className="cinzel-400">Custom List</span>
+                </a>
+              </li>
+              <li className="navbar-item">
+                <a href="#filter">
+                  <IoColorFilterOutline className="icon" />
+                  <span className="cinzel-400">Filter</span>
+                </a>
+              </li>
+              <li className="navbar-item">
+                <a href="#profile">
+                  <IoPersonOutline className="icon" />
+                  <span className="cinzel-400">Profile</span>
+                </a>
+              </li>
+              <li className="navbar-item">
+                <a href="#signout">
+                  <VscSignOut className="icon" />
+                  <span className="cinzel-400">Sign Out</span>
+                </a>
+              </li>
+            </div>
+            {/* 
+            <VscSignOut />
             <li className="navbar-item">
               <Link to="/cast">
+              <IoPersonOutline />
                 <FaPersonHalfDress className="icon" />
                 <span className="cinzel-400">Cast</span>
               </Link>
@@ -132,7 +156,7 @@ export function Navbar() {
                 <FaPhoneAlt className="icon" />
                 <span className="cinzel-400">Contact</span>
               </Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
       </div>
