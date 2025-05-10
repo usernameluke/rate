@@ -1,12 +1,12 @@
 import { Navbar } from "./components/Navbar";
 import { Series } from "./components/Series";
 import { Films } from "./components/Films";
-import { slides } from "./data/carouselData.json";
 import { Routes, Route } from "react-router-dom";
 import { WantToWatch } from "./pages/WantToWatch";
-import { Watching } from "./pages/Watching";
-import { Watched } from "./pages/Watched";
-import { Info } from "./pages/Info";
+import Info from "./pages/Info";
+import { Browse } from "./pages/Browse";
+// import { Watching } from "./pages/Watching";
+// import { Watched } from "./pages/Watched";
 
 function App() {
   return (
@@ -22,25 +22,29 @@ function App() {
       </header>
       <main className="mainpage">
         <Routes>
-          <Route path="/wanttowatch" element={<WantToWatch data={slides} />} />
-          <Route path="/watching" element={<Watching data={slides} />} />
-          <Route path="/watching" element={<Watched data={slides} />} />
-          <Route path="/series" element={<Series data={slides} />} />
-          <Route path="/films" element={<Films data={slides} />} />
-          <Route path="/info/:specificId" element={<Info data={slides} />} />
+          <Route path="/wanttowatch" element={<WantToWatch/>} />
+          {/* <Route path="/watching" element={<Watching data={slides} />} />
+          <Route path="/watching" element={<Watched data={slides} />} /> */}
+          <Route path="/browse" element={<Browse/>} />
+          <Route path="/films" element={<Films />} />
+          <Route path="/info/:specificId" element={<Info />} />
         </Routes>
 
-        <section id="to-watch">
-          <WantToWatch data={slides} />
+        <section id="browse">
+          <Browse/>
         </section>
 
-        <section id="watching">
+        <section id="to-watch">
+          <WantToWatch/>
+        </section>
+
+        {/* <section id="watching">
           <Watching data={slides} />
         </section>
 
         <section id="watched">
           <Watched data={slides} />
-        </section>
+        </section> */}
 
         <section id="custom-list">
           <div></div>

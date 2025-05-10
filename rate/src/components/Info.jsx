@@ -1,28 +1,4 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-
-const Info = () => {
-
-  const { specificId } = useParams();
-
-  const [movie, setMovie] = useState([]);
-
-  useEffect(() => {
-    fetchInfo();
-  }, [specificId]);
-  //  do a call to the api to get the movie with the id specificId
-const fetchInfo = async () => {
-    const response = await fetch(
-      `https://api.themoviedb.org/3/movie/${specificId}
-?api_key=6addbdd2457d4d8d9a03e850cef564d7`
-    );
-    const data = await response.json();
-    console.log(data)
-    setMovie(data);
-  };
-
-  // display the content
-
+const Info = ({ movie }) => {
   return (
     <>
       <div id="info" className="info-page cinzel-500 text-white">
@@ -44,9 +20,9 @@ const fetchInfo = async () => {
         </div>
 
         <div className="info-page-mid">
-          <h5 className="text-xs info-description">
-            {movie.overview}
-          </h5>
+          {/* <h5 className="text-xs info-description">
+            {movie.overview.slice(0, 100) + "..."}
+          </h5> */}
         </div>
 
         <div className="info-btn-container">

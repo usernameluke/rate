@@ -82,10 +82,10 @@ export function Navbar() {
                     src="\src\images\ToWatch.png"
                     alt="To watch"
                   />
-                  <span className="cinzel-400">Want to Watch</span>
+                  <span className="cinzel-400">Watchlist</span>
                 </a>
               </li>
-              <li className="navbar-item">
+              {/* <li className="navbar-item">
                 <a href="#watching">
                   <img
                     className="icon"
@@ -104,7 +104,7 @@ export function Navbar() {
                   />
                   <span className="cinzel-400">Watched</span>
                 </a>
-              </li>
+              </li> */}
               <li className="navbar-item">
                 <a href="#custom-list">
                   <CiViewList className="icon" />
