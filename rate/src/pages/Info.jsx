@@ -29,7 +29,7 @@ const fetchInfo = async () => {
         <div className="info-page-top">
           <div className="info-flex">
             <img
-              src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRpLIvbvkKxwW5QMfY025kVAN9O5WH3URdEu7Dfiau3QSBZHZdxfsi1Yn-pV11MLBLp1KEMnjjteUQskCBJJmk-9cuX_kIfv9WrIyxJTn_RTuM-EnJj_NlRBw"
+              src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
               alt="ShawShank"
               className="info-poster"
             />
@@ -38,7 +38,7 @@ const fetchInfo = async () => {
             </h3>
             <div className="info-row">
               <p className="info text-white text-xs">{movie.release_date}</p>
-              <p className="info text-white text-xs">{movie.rate_average}</p>
+              <p className="info text-white text-xs">{Math.round(movie.vote_average * 10)}/100</p>
             </div>
           </div>
         </div>

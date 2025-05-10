@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Info from "../components/Info";
 
 export function WantToWatch() {
   const [movies, setMovies] = useState([]);
+
+  const [minRating, setMinRating] = useState(0);
 
   useEffect(() => {
     fetchInfo();
@@ -15,6 +16,13 @@ export function WantToWatch() {
     );
     const data = await response.json();
     setMovies(data.results);
+  };
+
+  const handleFilter = (rate) => {
+    setMinRating(rate);
+
+    const filtered = movies.filter((movie) => movie.vote_average >= rate);
+    setMovies(filtered);
   };
 
   return (
@@ -45,7 +53,31 @@ export function WantToWatch() {
         </nav>
         <nav className="watchlist-menu cinzel-400 text-white">
           <a href="#all">Genre</a>
-          <a href="#movies">Rating</a>
+          <select name="rating" id="Rating">
+            <option value="nothing">Rating</option>
+            <option
+              onClick={() => handleFilter(9)}
+              className="text-black"
+              value="90-100"
+            >
+              90-100
+            </option>
+
+            <option
+              onClick={() => handleFilter(8)}
+              className="text-black"
+              value="80-89"
+            >
+              80-89
+            </option>
+            <option
+              onClick={() => handleFilter(7)}
+              className="text-black"
+              value="71-79"
+            >
+              71-79
+            </option>
+          </select>
           <a href="#series">Director</a>
           <a href="#series">Year</a>
         </nav>
@@ -66,10 +98,15 @@ export function WantToWatch() {
                 <Link to={`/info/${item.id}`}>
                   <div className="watchlist-row">
                     <div className="watchlist-img">
-                      <img src={item.src} alt={item.alt} className="poster" />
+                      <img
+                        src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
+                        alt={item.alt}
+                        className="poster"
+                      />
                     </div>
                     <div className="watchlist-info cinzel-500 text-white">
                       <p>{item.title}</p>
+                      <p>{Math.round(item.vote_average * 10)}/100</p>
                     </div>
                   </div>
                   //{" "}

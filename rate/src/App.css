@@ -102,6 +102,19 @@
     border: none;
   }
 
+  .rating-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rating{
+    margin: 0 10px;
+    padding:0 5px;
+    border: 1px solid white;
+    border-radius: 10000px;
+  }
+
   .modal-container {
     position: fixed;
     left: 0;
@@ -403,8 +416,7 @@
   }
 
   .info-poster {
-    height: 150px;
-    width: 100vw;
+    height: 200px;
     border-radius: 5%;
     margin: 1rem;
   }
