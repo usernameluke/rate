@@ -1,47 +1,60 @@
 {
   "watchlist": [
     {
+      "watchlist_id": 1,
+      "type": "film",
       "id": 278,
-      "title": "The Shawshank Redemption",
-      "overview": "Imprisoned in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope.",
       "comments": "I want to watch this movie for easter break",
-      "status": "To Watch",
-      "media": ["youtube", "netflix"],
-      "rating": 8.707
+      "status": "To Watch"
     },
     {
+      "watchlist_id": 2,
+      "type": "film",
       "id": 238,
-      "title": "The Godfather",
-      "overview": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.",
       "comments": "I want to watch this movie for christmas",
-      "status": "To Watch",
-      "media": ["youtube", "netflix"],
-      "rating": 8.7
-    }
-  ],
-  "projects": [
-    {
-      "title": "Jam & Peanut Butter",
-      "description": "The best morning sarnie",
-      "id": 1
-    }
-  ],
-  "tasks": [
-    {
-      "id": 1,
-      "projectId": 1,
-      "description": "Use Vite to create a basic React app"
+      "status": "Watching"
     },
     {
-      "id": 2,
-      "projectId": 1,
-      "description": "Install React Router and setup routes"
+      "watchlist_id": 3,
+      "type": "film",
+      "id": 327,
+      "comments": "Bish bash bosh",
+      "status": "To Watch"
     },
     {
-      "projectId": 2,
-      "title": "New Task",
-      "description": "This is a new task.",
-      "id": 3
+      "watchlist_id": 4,
+      "type": "film",
+      "id": 398,
+      "comments": "Random random random",
+      "status": "Watched"
+    },
+    {
+      "watchlist_id": 5,
+      "type": "show",
+      "id": 111,
+      "comments": "Meow",
+      "status": "Watched"
+    },
+    {
+      "watchlist_id": 6,
+      "type": "show",
+      "id": 238,
+      "comments": "Goodness gracious",
+      "status": "To Watch"
+    },
+    {
+      "watchlist_id": 7,
+      "type": "film",
+      "id": 123,
+      "comments": "Something something something",
+      "status": "Watching"
+    },
+    {
+      "watchlist_id": 8,
+      "type": "film",
+      "id": 321,
+      "comments": "Watching",
+      "status": "To Watch"
     }
   ]
 }

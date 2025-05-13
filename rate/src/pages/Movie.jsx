@@ -1,27 +1,38 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { GenreModal } from "../components/GenreModal";
 
-const Info = () => {
-
+const Movie = () => {
   const { specificId } = useParams();
 
   const [movie, setMovie] = useState([]);
 
   useEffect(() => {
-    fetchInfo();
+    fetchMovie();
   }, [specificId]);
-  //  do a call to the api to get the movie with the id specificId
-const fetchInfo = async () => {
+
+  const fetchMovie = async () => {
     const response = await fetch(
       `https://api.themoviedb.org/3/movie/${specificId}
 ?api_key=6addbdd2457d4d8d9a03e850cef564d7`
     );
     const data = await response.json();
-    console.log(data)
     setMovie(data);
   };
 
-  // display the content
+  const [movieGenre, setMovieGenre] = useState([]);
+
+  useEffect(() => {
+    fetchMovieGenre();
+  }, []);
+
+  const fetchMovieGenre = async () => {
+    const response = await fetch(
+      `https://api.themoviedb.org/3/genre/movie/list?api_key=6addbdd2457d4d8d9a03e850cef564d7`
+    );
+    const data = await response.json();
+    setMovieGenre(data);
+  };
 
   return (
     <>
@@ -38,20 +49,23 @@ const fetchInfo = async () => {
             </h3>
             <div className="info-row">
               <p className="info text-white text-xs">{movie.release_date}</p>
-              <p className="info text-white text-xs">{Math.round(movie.vote_average * 10)}/100</p>
+              <p className="info text-white text-xs">
+                {movie.genres?.map((genre) => genre.name).join(", ")}
+              </p>
+              <p className="info text-white text-xs">
+                {Math.round(movie.vote_average * 10)}/100
+              </p>
             </div>
           </div>
         </div>
 
         <div className="info-page-mid">
-          <h5 className="text-xs info-description">
-            {movie.overview}
-          </h5>
+          <h5 className="text-xs info-description">{movie.overview}</h5>
         </div>
 
         <div className="info-btn-container">
           <button className="info-btn text-white cinzel-500 text-sm">
-            Added to Watchlist
+            <GenreModal/>
           </button>
         </div>
       </div>
@@ -60,4 +74,4 @@ const fetchInfo = async () => {
   );
 };
 
-export default Info;
+export default Movie;

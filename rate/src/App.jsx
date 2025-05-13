@@ -1,12 +1,9 @@
 import { Navbar } from "./components/Navbar";
-import { Series } from "./components/Series";
-import { Films } from "./components/Films";
 import { Routes, Route } from "react-router-dom";
 import { WantToWatch } from "./pages/WantToWatch";
-import Info from "./pages/Info";
+import Movie from "./pages/Movie";
+import Show from "./pages/Show";
 import { Browse } from "./pages/Browse";
-// import { Watching } from "./pages/Watching";
-// import { Watched } from "./pages/Watched";
 
 function App() {
   return (
@@ -23,11 +20,9 @@ function App() {
       <main className="mainpage">
         <Routes>
           <Route path="/wanttowatch" element={<WantToWatch/>} />
-          {/* <Route path="/watching" element={<Watching data={slides} />} />
-          <Route path="/watching" element={<Watched data={slides} />} /> */}
           <Route path="/browse" element={<Browse/>} />
-          <Route path="/films" element={<Films />} />
-          <Route path="/info/:specificId" element={<Info />} />
+          <Route path="/movie/:specificId" element={<Movie />} />
+          <Route path="/show/:specificId" element={<Show />} />
         </Routes>
 
         <section id="browse">
@@ -38,19 +33,7 @@ function App() {
           <WantToWatch/>
         </section>
 
-        {/* <section id="watching">
-          <Watching data={slides} />
-        </section>
-
-        <section id="watched">
-          <Watched data={slides} />
-        </section> */}
-
         <section id="custom-list">
-          <div></div>
-        </section>
-
-        <section id="filter">
           <div></div>
         </section>
       </main>

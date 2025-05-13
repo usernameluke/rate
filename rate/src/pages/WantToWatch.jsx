@@ -104,7 +104,7 @@ export function WantToWatch() {
                         className="poster"
                       />
                     </div>
-                    <div className="watchlist-info cinzel-500 text-white">
+                    <div className="watchlist-info cinzel-500 text-white text-sm">
                       <p>{item.title}</p>
                       <p>{Math.round(item.vote_average * 10)}/100</p>
                     </div>
@@ -117,7 +117,7 @@ export function WantToWatch() {
         </swiper-container>
       </main>
       <footer className="watchlist-footer">
-        <p className="cinzel-500 text-white">Meow</p>
+        <p className="cinzel-500 text-white"></p>
       </footer>
     </div>
   );
