@@ -7,8 +7,13 @@ const Movie = () => {
 
   const [movie, setMovie] = useState([]);
 
+  const [movieGenre, setMovieGenre] = useState([]);
+  const [trailerKey, setTrailerKey] = useState(null);
+
   useEffect(() => {
     fetchMovie();
+    fetchTrailer();
+    fetchMovieGenre();
   }, [specificId]);
 
   const fetchMovie = async () => {
@@ -20,11 +25,19 @@ const Movie = () => {
     setMovie(data);
   };
 
-  const [movieGenre, setMovieGenre] = useState([]);
-
-  useEffect(() => {
-    fetchMovieGenre();
-  }, []);
+  const fetchTrailer = async () => {
+    const response = await fetch(
+      `https://api.themoviedb.org/3/movie/${specificId}/videos?api_key=6addbdd2457d4d8d9a03e850cef564d7`
+    );
+    const data = await response.json();
+    const trailer = data.results.find(
+      (video) =>
+        video.type === "Trailer" && video.site === "YouTube" && video.official
+    );
+    if (trailer) {
+      setTrailerKey(trailer.key);
+    }
+  };
 
   const fetchMovieGenre = async () => {
     const response = await fetch(
@@ -39,11 +52,23 @@ const Movie = () => {
       <div id="info" className="info-page cinzel-500 text-white">
         <div className="info-page-top">
           <div className="info-flex">
-            <img
-              src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-              alt="ShawShank"
-              className="info-poster"
-            />
+            {trailerKey ? (
+              <iframe
+                width="100%"
+                height="281"
+                src={`https://www.youtube.com/embed/${trailerKey}`}
+                title="YouTube video player"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+                className="info-poster"
+              ></iframe>
+            ) : (
+              <img
+                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                alt={movie.original_title}
+                className="info-poster"
+              />
+            )}
             <h3 className="text-xl text-center font-bold text-red">
               {movie.original_title} <hr />
             </h3>
@@ -64,9 +89,7 @@ const Movie = () => {
         </div>
 
         <div className="info-btn-container">
-          <button className="info-btn text-white cinzel-500 text-sm">
-            <GenreModal/>
-          </button>
+          <GenreModal />
         </div>
       </div>
       ;

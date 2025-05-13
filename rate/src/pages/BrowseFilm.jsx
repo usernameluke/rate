@@ -134,13 +134,12 @@ export function BrowseFilm() {
           {filterMovies.map((item) => (
             <swiper-slide key={item.id} className="z-0">
               <Link to={`/movie/${item.id}`}>
-                <a href="#info">
+              
                   <img
                     src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
                     alt={item.alt}
                     className="poster"
                   />
-                </a>
               </Link>
             </swiper-slide>
           ))}

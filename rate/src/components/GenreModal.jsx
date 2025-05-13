@@ -9,7 +9,7 @@ export const GenreModal = () => {
 
   return (
     <>
-      <button className="cinzel-400 text-white text-sm " onClick={() => setShowGenre(!showGenre)}>
+      <button className="watchlist-btn cinzel-400 text-white text-sm " onClick={() => setShowGenre(!showGenre)}>
         {showGenre ? "Add to Watchlist" : "Add to Watchlist"}
       </button>
       {showGenre && (
