@@ -33,7 +33,6 @@ const Show = () => {
     );
     const data = await response.json();
 
-    // Find first official trailer hosted on YouTube
     const trailer = data.results.find(
       (video) =>
         video.type === "Trailer" && video.site === "YouTube" && video.official
@@ -96,7 +95,7 @@ const Show = () => {
         </div>
 
         <div className="info-btn-container">
-          <GenreModal />
+          <GenreModal specificId={specificId} type="tv"/>
         </div>
       </div>
       ;

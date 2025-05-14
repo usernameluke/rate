@@ -22,6 +22,8 @@ const Movie = () => {
 ?api_key=6addbdd2457d4d8d9a03e850cef564d7`
     );
     const data = await response.json();
+
+    console.log("data received:", data);
     setMovie(data);
   };
 
@@ -49,7 +51,7 @@ const Movie = () => {
 
   return (
     <>
-      <div id="info" className="info-page cinzel-500 text-white">
+      <div className="info-page cinzel-500 text-white">
         <div className="info-page-top">
           <div className="info-flex">
             {trailerKey ? (
@@ -89,10 +91,9 @@ const Movie = () => {
         </div>
 
         <div className="info-btn-container">
-          <GenreModal />
+          <GenreModal specificId={specificId} type="movie" />
         </div>
       </div>
-      ;
     </>
   );
 };

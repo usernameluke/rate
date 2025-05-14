@@ -1,60 +1,72 @@
 {
   "watchlist": [
     {
-      "watchlist_id": 1,
+      "id": 1,
       "type": "film",
-      "id": 278,
+      "source_id": 278,
       "comments": "I want to watch this movie for easter break",
       "status": "To Watch"
     },
     {
-      "watchlist_id": 2,
+      "id": 2,
       "type": "film",
-      "id": 238,
+      "source_id": 238,
       "comments": "I want to watch this movie for christmas",
       "status": "Watching"
     },
     {
-      "watchlist_id": 3,
+      "id": 3,
       "type": "film",
-      "id": 327,
+      "source_id": 327,
       "comments": "Bish bash bosh",
       "status": "To Watch"
     },
     {
-      "watchlist_id": 4,
+      "id": 4,
       "type": "film",
-      "id": 398,
+      "source_id": 398,
       "comments": "Random random random",
       "status": "Watched"
     },
     {
-      "watchlist_id": 5,
+      "id": 5,
       "type": "show",
-      "id": 111,
+      "source_id": 111,
       "comments": "Meow",
       "status": "Watched"
     },
     {
-      "watchlist_id": 6,
+      "id": 6,
       "type": "show",
-      "id": 238,
+      "source_id": 238,
       "comments": "Goodness gracious",
       "status": "To Watch"
     },
     {
-      "watchlist_id": 7,
+      "id": 7,
       "type": "film",
-      "id": 123,
+      "source_id": 123,
       "comments": "Something something something",
       "status": "Watching"
     },
     {
-      "watchlist_id": 8,
+      "id": 8,
       "type": "film",
-      "id": 321,
+      "source_id": 321,
       "comments": "Watching",
       "status": "To Watch"
+    },
+    {
+      "source_id": "278",
+      "type": "movie",
+      "status": "To Watch",
+      "id": 9
+    },
+    {
+      "source_id": "1396",
+      "type": "tv",
+      "status": "Watching",
+      "id": 10
     }
   ]
 }

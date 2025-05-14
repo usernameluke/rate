@@ -112,12 +112,6 @@ export function Navbar() {
                 </a>
               </li>
               <li className="navbar-item">
-                <a href="#filter">
-                  <IoColorFilterOutline className="icon" />
-                  <span className="cinzel-400">Filter</span>
-                </a>
-              </li>
-              <li className="navbar-item">
                 <a href="#profile">
                   <IoPersonOutline className="icon" />
                   <span className="cinzel-400">Profile</span>

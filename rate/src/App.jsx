@@ -4,6 +4,7 @@ import { WantToWatch } from "./pages/WantToWatch";
 import Movie from "./pages/Movie";
 import Show from "./pages/Show";
 import { Browse } from "./pages/Browse";
+import { WatchlistItem } from "./components/WatchlistItem";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/browse" element={<Browse/>} />
           <Route path="/movie/:specificId" element={<Movie />} />
           <Route path="/show/:specificId" element={<Show />} />
+          <Route path="/watchlist/:id" element={<WatchlistItem/>}/>
         </Routes>
 
         <section id="browse">

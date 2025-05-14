@@ -1,29 +1,24 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { WatchlistItem } from "../components/WatchlistItem";
 
 export function WantToWatch() {
-  const [movies, setMovies] = useState([]);
+  const [watchlist, setWatchlist] = useState([]);
+  const API_URL = "http://localhost:5005";
 
-  const [minRating, setMinRating] = useState(0);
+  const getWatchlist = () => {
+    axios.get(`${API_URL}/watchlist`)
+    .then ((response) => {
+      setWatchlist(response.data);
+    })
+  }
 
-  useEffect(() => {
-    fetchInfo();
-  }, []);
+  useEffect( () => {
+    getWatchlist();
 
-  const fetchInfo = async () => {
-    const response = await fetch(
-      "https://api.themoviedb.org/3/movie/top_rated?api_key=6addbdd2457d4d8d9a03e850cef564d7"
-    );
-    const data = await response.json();
-    setMovies(data.results);
-  };
+  }, [])
 
-  const handleFilter = (rate) => {
-    setMinRating(rate);
-
-    const filtered = movies.filter((movie) => movie.vote_average >= rate);
-    setMovies(filtered);
-  };
 
   return (
     <div className="watchlist-page">
@@ -92,25 +87,11 @@ export function WantToWatch() {
           direction="vertical"
           className="watchlist-main"
         >
-          {movies.map((item) => {
+          {watchlist.map((item) => {
+            
             return (
-              <swiper-slide key={item.id}>
-                <Link to={`/info/${item.id}`}>
-                  <div className="watchlist-row">
-                    <div className="watchlist-img">
-                      <img
-                        src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
-                        alt={item.alt}
-                        className="poster"
-                      />
-                    </div>
-                    <div className="watchlist-info cinzel-500 text-white text-sm">
-                      <p>{item.title}</p>
-                      <p>{Math.round(item.vote_average * 10)}/100</p>
-                    </div>
-                  </div>
-                  //{" "}
-                </Link>
+              <swiper-slide key={`watchlist-item-${item.id}`}>
+                <WatchlistItem specificId={item.source_id} type={item.type}/>
               </swiper-slide>
             );
           })}
@@ -121,4 +102,4 @@ export function WantToWatch() {
       </footer>
     </div>
   );
-}
+  }
