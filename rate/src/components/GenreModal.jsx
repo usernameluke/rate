@@ -21,6 +21,7 @@ export const GenreModal = ({ specificId, type }) => {
       .post(`${API_URL}/watchlist`, requestBody)
       .then((response) => {
         navigate("/watchlist");
+        window.location.reload();
       })
       .catch((error) => console.log(error));
   };

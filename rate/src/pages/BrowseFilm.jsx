@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { IoIosArrowDropleft } from "react-icons/io";
 import { IoIosArrowDropright } from "react-icons/io";
-import { GenreModal } from "../components/GenreModal";
 
 export function BrowseFilm() {
   const [movies, setMovies] = useState([]);

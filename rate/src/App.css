@@ -244,10 +244,14 @@ swiper-container {
 
   .watchlist-row {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .watchlist-img {
     height: 120px;
+    display: flex;
+    justify-content: start;
   }
 
   .watchlist-info {
@@ -255,16 +259,26 @@ swiper-container {
     flex-direction: column;
     justify-content: center;
     align-items: start;
+    margin-left: 10px;
+  }
+
+  .watchlist-status{
+    text-align: start;
+  }
+
+  .watchlist-buttons{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
   }
 
   .watchlist-btn{
-    background-color: rgba(209, 45, 53, 1);
-    padding: 10px;
-    border-radius: 10000px;
+    margin: 10px;
   }
 
   .poster {
     height: 110px;
+    width: 73.86px;
     margin: 10px;
     border: 1px solid white;
     border-radius: 5px;

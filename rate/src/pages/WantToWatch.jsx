@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
 import { WatchlistItem } from "../components/WatchlistItem";
 
@@ -51,7 +50,7 @@ export function WantToWatch() {
           <select name="rating" id="Rating">
             <option value="nothing">Rating</option>
             <option
-              onClick={() => handleFilter(9)}
+              // onClick={() => handleFilter(9)}
               className="text-black"
               value="90-100"
             >
@@ -59,14 +58,14 @@ export function WantToWatch() {
             </option>
 
             <option
-              onClick={() => handleFilter(8)}
+              // onClick={() => handleFilter(8)}
               className="text-black"
               value="80-89"
             >
               80-89
             </option>
             <option
-              onClick={() => handleFilter(7)}
+              // onClick={() => handleFilter(7)}
               className="text-black"
               value="71-79"
             >
@@ -91,7 +90,7 @@ export function WantToWatch() {
             
             return (
               <swiper-slide key={`watchlist-item-${item.id}`}>
-                <WatchlistItem specificId={item.source_id} type={item.type}/>
+                <WatchlistItem specificId={item.source_id} type={item.type} id={item.id}/>
               </swiper-slide>
             );
           })}

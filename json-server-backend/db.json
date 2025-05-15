@@ -1,32 +1,11 @@
 {
   "watchlist": [
     {
-      "id": 1,
-      "type": "film",
-      "source_id": 278,
-      "comments": "I want to watch this movie for easter break",
-      "status": "To Watch"
-    },
-    {
-      "id": 2,
-      "type": "film",
-      "source_id": 238,
-      "comments": "I want to watch this movie for christmas",
-      "status": "Watching"
-    },
-    {
-      "id": 3,
-      "type": "film",
-      "source_id": 327,
-      "comments": "Bish bash bosh",
-      "status": "To Watch"
-    },
-    {
       "id": 4,
       "type": "film",
       "source_id": 398,
       "comments": "Random random random",
-      "status": "Watched"
+      "status": "Watching"
     },
     {
       "id": 5,
@@ -57,16 +36,28 @@
       "status": "To Watch"
     },
     {
-      "source_id": "278",
+      "source_id": "424",
       "type": "movie",
-      "status": "To Watch",
+      "status": "Watched",
       "id": 9
     },
     {
-      "source_id": "1396",
-      "type": "tv",
+      "source_id": "598",
+      "type": "movie",
       "status": "Watching",
       "id": 10
+    },
+    {
+      "source_id": "70785",
+      "type": "tv",
+      "status": "Watching",
+      "id": 12
+    },
+    {
+      "source_id": "1398",
+      "type": "tv",
+      "status": "To Watch",
+      "id": 13
     }
   ]
 }
